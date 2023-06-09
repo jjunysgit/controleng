@@ -1,7 +1,7 @@
 import streamlit as st
-
-st.title(" 경과기 선형 회귀 문제")
-st.header(" LYJ ")
+###
+st.title(" 메카트로닉스공학과 제어공학 시험")
+st.header(" LEE YONG JUN ")
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -93,6 +93,7 @@ plt.grid()
 st.pyplot(fig5)
 #극점과 영점 찾기
 zeros, poles, _ = signal.tf2zpk(num, den)
+
 
 #그래프 그리기 : 극점과 영점
 fig6 = plt.figure()
