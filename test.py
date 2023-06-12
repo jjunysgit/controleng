@@ -18,15 +18,15 @@ st.write("TransferFunction G(s):")
 st.write(G1)
 
 
-#단위 계산 응답
+#단위 계단 응답
 num = [100]
 den = [1,5,106]
 system = signal.TransferFunction(num,den)
 
-#단위 계단 응답
-t,y=step(system)
+
 
 #그래프 그리기: 단위 계단 응답
+t,y=step(system)
 fig = plt.figure()
 plt.figure()
 plt.plot(t,y)
