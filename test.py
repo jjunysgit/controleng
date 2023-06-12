@@ -28,7 +28,6 @@ system = signal.TransferFunction(num,den)
 #그래프 그리기: 단위 계단 응답
 t,y=step(system)
 fig = plt.figure()
-plt.figure()
 plt.plot(t,y)
 plt.xlabel('Time(s)')
 plt.ylabel('Response')
