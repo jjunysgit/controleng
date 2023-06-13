@@ -14,9 +14,11 @@ G = control.TransferFunction([100],[1,5,6])
 # 폐루프 전달함수 계산
 G1 = control.feedback(G)
 
-st.write("TransferFunction G(s):")
-st.write(G1)
+numerator = ' '.join(str(coeff) for coeff in G2.num[0])
+denominator = ' '.join(str(coeff) for coeff in G2.den[0])
 
+fraction = f"{numerator}\n-----------\n{denominator}"
+st.write(fraction)
 
 #단위 계단 응답
 num = [100]
