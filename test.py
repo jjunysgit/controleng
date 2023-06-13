@@ -17,7 +17,7 @@ G1 = control.feedback(G)
 
 G1_str1 = f"{G1.num[0][0][0]}"
 G1_str2 = f"{G1.den[0][0][0]} s^2 + {G1.den[0][0][1]} s + {G1.den[0][0][2]}"
-st.latex(r'''\frac{5}{1}''')
+st.latex(r"\frac{5}{1}")
 
 
 #단위 계단 응답
