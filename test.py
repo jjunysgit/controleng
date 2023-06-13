@@ -14,7 +14,7 @@ st.header("202221016")
 G = control.TransferFunction([100],[1,5,6])
 # 폐루프 전달함수 계산
 G1 = control.feedback(G)
-
+st.write("폐루프 전달함수 : ")
 st.latex(r"\frac{100}{s^2+5s+106}")
 
 
