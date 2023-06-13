@@ -15,7 +15,7 @@ G = control.TransferFunction([100],[1,5,6])
 # 폐루프 전달함수 계산
 G1 = control.feedback(G)
 
-G1_str = f"{G1.num[0][0][0]} / ({G1.den[0][0][0]} s^2 + {G1.den[0][0][1]} s + {G1.den[0][0][2]})"
+G1_str = f"{G1.num[0][0][0]} \n ----------------- \n ({G1.den[0][0][0]} s^2 + {G1.den[0][0][1]} s + {G1.den[0][0][2]})"
 st.write("피드백한 전달함수 G(s):", G1_str)
 
 #단위 계단 응답
