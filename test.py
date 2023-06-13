@@ -4,7 +4,7 @@ import numpy as np
 from scipy.signal import lti, step
 import matplotlib.pyplot as plt
 from scipy import signal
-import sympy as sp
+
 
 st.title("조상희")
 st.header("202221016")
@@ -15,10 +15,15 @@ G = control.TransferFunction([100],[1,5,6])
 # 폐루프 전달함수 계산
 G1 = control.feedback(G)
 
-s = sp.symbols('s')
-numerator, denominator = sp.fraction(G1.evalfr(s))
-fraction = sp.apart(numerator / denominator, s)
-st.write(fraction)
+numerator_coeffs = G1.num[0][0][0]
+denominator_coeffs = G1.den[0][0]
+
+numerator = ' '.join(str(coeff) for coeff in numerator_coeffs)
+denominator = ' '.join([f"s^{i}" if i > 0 else str(coeff) for i, coeff in enumerate(denominator_coeffs)])
+
+fraction = f"{numerator}\n---\n{denominator}"
+st.markdown(fraction)
+
 #단위 계단 응답
 num = [100]
 den = [1,5,106]
