@@ -15,9 +15,7 @@ G = control.TransferFunction([100],[1,5,6])
 # 폐루프 전달함수 계산
 G1 = control.feedback(G)
 
-G1_str1 = f"{G1.num[0][0][0]}"
-G1_str2 = f"{G1.den[0][0][0]} s^2 + {G1.den[0][0][1]} s + {G1.den[0][0][2]}"
-st.latex(r"\frac{G1_str1}{G1_str2}")
+st.latex("\frac{100}{s^2+5s^2+106}")
 
 
 #단위 계단 응답
