@@ -14,7 +14,7 @@ G = control.TransferFunction([100],[1,5,6])
 # 폐루프 전달함수 계산
 G1 = control.feedback(G)
 
-st.write(G2)
+st.markdown(G1)
 
 #단위 계단 응답
 num = [100]
