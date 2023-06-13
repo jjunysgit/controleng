@@ -15,7 +15,7 @@ sidebar_time = st.sidebar.time_input("시간을 설정하세요")
 #단위계단응답
 G1 = control.TransferFunction([100],[1,5,6])
 G2 = control.feedback(G1)
-st.write(str(G2))
+st.write(G2)
 
 
 num = [100]
